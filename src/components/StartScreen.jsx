@@ -1,28 +1,32 @@
-import PropTypes from 'prop-types';
-import logo from '../assets/img/logo.png'
+import PropTypes from "prop-types";
+import logo from "../assets/img/logo.png";
+import logoPalavrigma from "../assets/img/palavrigma-logo.png";
 
-const StartScreen = ({ gameScreen, personApresentation }) => {
+const StartScreen = ({ startGame, personApresentation }) => {
   return (
-    <div>
-      <h1 className='text-5xl pb-3'>PalaVrigma</h1>
-      <div className='flex justify-center'>
-        <img className='h-80' src={logo} alt="Personagens" />
+    <div className="flex flex-col p-4 gap-6 ">
+      <div className="flex flex-col gap-8">
+        <img className="pt-8" src={logoPalavrigma} alt="logo palavrigma" />
+        <img className="" src={logo} alt="Personagens" />
       </div>
-      <button className="bg-yellow-400 text-white font-bold py-3 px-16 rounded-full transition-transform transform hover:scale-125 duration-300 ease-in-out text-2xl" onClick={gameScreen}>
-      Jogar
-    </button>
-    <button className='bg-blue-200' onClick={personApresentation}>Conheça os Personagem</button>
+      <div className="flex flex-col items-center">
+        <button
+          className="py-3 w-1/2 bg-blue-500 text-white font-bold rounded-full transition-transform transform hover:scale-125 duration-300 ease-in-out text-2xl"
+          onClick={startGame}
+        >
+          Jogar
+        </button>
+        <button className="mt-4 py-3 px-3 bg-blue-500 text-white font-bold rounded-full transition-transform transform hover:scale-125 duration-300 ease-in-out" onClick={personApresentation}>
+          Conheça os Personagem
+        </button>
+      </div>
     </div>
   );
 };
 
 StartScreen.propTypes = {
-  gameScreen: PropTypes.func.isRequired,
+  startGame: PropTypes.func.isRequired,
   personApresentation: PropTypes.func.isRequired,
 };
 
 export default StartScreen;
-
-
-
-

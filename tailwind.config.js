@@ -6,9 +6,7 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        happyPink: '#fc5965',
-      },
+      
     },
   },
   plugins: [],
