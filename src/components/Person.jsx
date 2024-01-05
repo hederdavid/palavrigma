@@ -15,7 +15,7 @@ const Person = ({ personName, personImg, personColor, personText, alt }) => {
 
 Person.propTypes = {
   personName: PropTypes.string.isRequired,
-  personImg: PropTypes.string.isRequired,
+  personImg: PropTypes.any.isRequired,
   personColor: PropTypes.string.isRequired,
   personText: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,

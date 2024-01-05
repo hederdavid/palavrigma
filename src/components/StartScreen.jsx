@@ -4,12 +4,12 @@ import logoPalavrigma from "../assets/img/palavrigma-logo.png";
 
 const StartScreen = ({ startGame, personApresentation }) => {
   return (
-    <div className="flex flex-col p-4 gap-6 ">
-      <div className="flex flex-col gap-8">
+    <div className="flex flex-col p-4 gap-6 md:items-center h-screen">
+      <div className="flex flex-col gap-8 ">
         <img className="pt-8" src={logoPalavrigma} alt="logo palavrigma" />
-        <img className="" src={logo} alt="Personagens" />
+        <img className="md:w-1/2 self-center" src={logo} alt="Personagens" />
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center pt-10">
         <button
           className="py-3 w-1/2 bg-blue-500 text-white font-bold rounded-full transition-transform transform hover:scale-125 duration-300 ease-in-out text-2xl"
           onClick={startGame}
